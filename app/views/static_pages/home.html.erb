@@ -30,43 +30,74 @@
 
             <div class="form-group">
               <label for="first_name">First Name</label>
-              <input type="text" class="form-control" id="first_name" placeholder="First Name">
+              <input type="text" class="form-control" id="consumer_first_name" placeholder="First Name">
             </div>
             <div class="form-group">
               <label for="last_name">Last Name</label>
-              <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+              <input type="text" class="form-control" id="consumer_last_name" placeholder="Last Name">
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="text" class="form-control" id="email" placeholder="Email">
+              <input type="text" class="form-control" id="consumer_email" placeholder="Email">
             </div>
             <div class="form-group">
               <label for="address">Last Name</label>
-              <input type="text" class="form-control" id="address" placeholder="Street Address">
+              <input type="text" class="form-control" id="consumer_address" placeholder="Street Address">
             </div>
             <div class="form-group">
               <label for="postal_code">Postal Code</label>
-              <input type="text" class="form-control" id="postal_code" placeholder="Postal Code">
+              <input type="text" class="form-control" id="consumer_postal_code" placeholder="Postal Code">
             </div>
             <div class="form-group">
               <label for="region">Region</label>
-              <input type="text" class="form-control" id="region" placeholder="Region">
+              <input type="text" class="form-control" id="consumer_region" placeholder="Region">
             </div>
             <div class="form-group">
               <label for="country">Country</label>
-              <input type="text" class="form-control" id="country" placeholder="Country">
+              <input type="text" class="form-control" id="consumer_country" placeholder="Country">
             </div>
 
-            <input type="hidden" id="ref_id" value="3">
+            <input type="hidden" id="order_id" value="3">
 
             <label for="Amount">Amount</label>
-            <input type="integer" id="amount" value="3.33">
+            <input type="integer" id="consumer_amount" value="3.33">
 
             <button type="submit" class="btn btn-default">Buy it now</button>
+            <button id="sign2pay">Pay with your signature</button>
           </form>
         </div>
       </div>
     </div>
+    <script>
+      window.sign2PayOptions = {
+        merchant_id: '5540c68d6261645dfe3b0600',
+        token: '5540c6cc6261645dfe400600',
+        el: '#sign2pay',
+        checkout_type: 'single',
+        domain : "sign2pay.com",
+        map:{
+          first_name: '#consumer_first_name',
+          last_name: '#consumer_last_name',
+          email: '#consumer_email',
+          address: '#consumer_address',
+          postal_code: '#consumer_postal_code',
+          city: '#consumer_city',
+          region: '#consumer_region',
+          country: '#consumer_country',
+          amount: '#consumer_amount',
+          ref_id : '#order_id'
+        }
+      };
+
+      (function() {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//sign2pay.com/merchant.js";
+        s.async = true;
+        t = document.getElementsByTagName('script')[0];
+        t.parentNode.insertBefore(s, t);
+      })();
+    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

@@ -19,7 +19,53 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hello, world!  Coming Soon!</h1>
+      <h1>Stephanie Merchant Integration Test Webshop</h1>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Place an order below:</h3>
+        </div>
+        <div class="panel-body">
+          <form>
+
+            <div class="form-group">
+              <label for="first_name">First Name</label>
+              <input type="text" class="form-control" id="first_name" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last Name</label>
+              <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="address">Last Name</label>
+              <input type="text" class="form-control" id="address" placeholder="Street Address">
+            </div>
+            <div class="form-group">
+              <label for="postal_code">Postal Code</label>
+              <input type="text" class="form-control" id="postal_code" placeholder="Postal Code">
+            </div>
+            <div class="form-group">
+              <label for="region">Region</label>
+              <input type="text" class="form-control" id="region" placeholder="Region">
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <input type="text" class="form-control" id="country" placeholder="Country">
+            </div>
+
+            <input type="hidden" id="ref_id" value="3">
+
+            <label for="Amount">Amount</label>
+            <input type="integer" id="amount" value="3.33">
+
+            <button type="submit" class="btn btn-default">Buy it now</button>
+          </form>
+        </div>
+      </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
